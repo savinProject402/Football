@@ -60,6 +60,10 @@
     <Compile Include="Migrations\202102170056294_Changes_Navigation_Properties.designer.cs">
       <DependentUpon>202102170056294_Changes_Navigation_Properties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102170310055_create_addet_Cards_to_Players.cs" />
+    <Compile Include="Migrations\202102170310055_create_addet_Cards_to_Players.designer.cs">
+      <DependentUpon>202102170310055_create_addet_Cards_to_Players.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cards.cs" />
     <Compile Include="Models\Matches.cs" />
@@ -79,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102170056294_Changes_Navigation_Properties.resx">
       <DependentUpon>202102170056294_Changes_Navigation_Properties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102170310055_create_addet_Cards_to_Players.resx">
+      <DependentUpon>202102170310055_create_addet_Cards_to_Players.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
