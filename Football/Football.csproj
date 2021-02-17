@@ -41,7 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CardsController.cs" />
+    <Compile Include="Models\Cards\AddCardToPlayerPostModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Football.Domain\Football.Domain.csproj">
+      <Project>{b0dc658f-3815-4f1d-992e-b3a5c88da1ff}</Project>
+      <Name>Football.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

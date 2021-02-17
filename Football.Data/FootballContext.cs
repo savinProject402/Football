@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Football.Data
 {
-   public class FootballContext : DbContext
+    public class FootballContext : DbContext
     {
         public FootballContext() : base("Default") { }
 
@@ -18,5 +18,22 @@ namespace Football.Data
         public DbSet<Cards> Cards { get; set; }
         public DbSet<Matches> Matches { get; set; }
         public DbSet<Players> Players { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Players>()
+                .Property(x => x.NamePlayer)
+                .HasMaxLength(100);
+
+            modelBuilder.Entity<Players>()
+                .HasIndex(x => x.NamePlayer)
+                .IsUnique();
+
+            modelBuilder.Entity<Cards>()
+                .HasMany(x => x.Players)
+                .WithMany(x => x.Cards);
+        }
     }
 }

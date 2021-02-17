@@ -60,6 +60,20 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Football.Data\Football.Data.csproj">
+      <Project>{095e7bb2-45b3-4ef7-91f8-54b5dcc62519}</Project>
+      <Name>Football.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Football.Domain\Football.Domain.csproj">
+      <Project>{b0dc658f-3815-4f1d-992e-b3a5c88da1ff}</Project>
+      <Name>Football.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Football\Football.csproj">
+      <Project>{015cd88b-f8b2-40fc-8c58-eb74ed47ccd4}</Project>
+      <Name>Football</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Football.Controllers;
+using Football.Data.Repositories;
+using Football.Domain.Services;
+using Football.Models.Cards;
+using System;
 
 namespace Football.Console
 {
@@ -10,6 +10,14 @@ namespace Football.Console
     {
         static void Main(string[] args)
         {
+            var cardRepo = new CardRepository();
+            var cardServices = new CardServices(cardRepo);
+            var cardControl = new CardsController(cardServices);
+
+            var addCardPostModel = new AddCardToPlayerPostModel {CardsId = 2, PlayersId = 1 };
+
+            cardControl.AddCardsToPlayers(addCardPostModel);
+
         }
     }
 }
