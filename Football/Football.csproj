@@ -43,9 +43,14 @@
   <ItemGroup>
     <Compile Include="Controllers\CardsController.cs" />
     <Compile Include="Models\Cards\AddCardToPlayerPostModel.cs" />
+    <Compile Include="Models\Pleyers\UpdatePlayersPostModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Football.Data\Football.Data.csproj">
+      <Project>{095e7bb2-45b3-4ef7-91f8-54b5dcc62519}</Project>
+      <Name>Football.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Football.Domain\Football.Domain.csproj">
       <Project>{b0dc658f-3815-4f1d-992e-b3a5c88da1ff}</Project>
       <Name>Football.Domain</Name>

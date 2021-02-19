@@ -7,6 +7,7 @@ namespace Football.Domain.Services
     {
         private readonly ICardRepository _cardRepository;
 
+
         public CardServices(ICardRepository cardRepository)
         {
             _cardRepository = cardRepository;
@@ -14,7 +15,8 @@ namespace Football.Domain.Services
 
         public void AddCardsToPlayers(int cardId, int playerId)
         {
-            _cardRepository.AddCardsToPlayers(cardId,  playerId);
+                _cardRepository.AddCardsToPlayers(cardId,  playerId);
         }
+
     }
 }
